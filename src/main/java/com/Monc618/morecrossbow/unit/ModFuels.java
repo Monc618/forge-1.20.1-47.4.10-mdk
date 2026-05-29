@@ -17,30 +17,30 @@ public class ModFuels {
 
 
 
-    /*public ModFuelItem(Properties pProperties,int burnTime) {
-        super(pProperties);
-        this.burnTime = burnTime;
-    }
-    private int burnTime = 0;
-
-    @Override
-    public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {
-        return burnTime;
-    }*/
 
     public static final int RANGED_BURN_TIME = 300;
 
     @SubscribeEvent
     public static void onFuelBurnTime(FurnaceFuelBurnTimeEvent event) {
         ItemStack stack = event.getItemStack();
-        Item item = stack.getItem(); // 这里去掉了混淆 m_41720_()
+        Item item = stack.getItem();
 
-        if (item == ModItems.IRON_CROSSBOW.get()) {
+        if (item == ModItems.COPPER_CROSSBOW.get()) {
             event.setBurnTime(RANGED_BURN_TIME);
-        } else if (item == ModItems.GOLD_CROSSBOW.get()) {
+        } else if (item == ModItems.IRON_CROSSBOW.get()) {
+            event.setBurnTime(RANGED_BURN_TIME);
+        }else if (item == ModItems.GOLD_CROSSBOW.get()) {
+            event.setBurnTime(RANGED_BURN_TIME);
+        }else if (item == ModItems.EMERALD_CROSSBOW.get()) {
+            event.setBurnTime(RANGED_BURN_TIME);
+        }else if (item == ModItems.DIAMOND_CROSSBOW.get()) {
+            event.setBurnTime(RANGED_BURN_TIME);
+        }else if (item == ModItems.NETHERITE_CROSSBOW.get()) {
             event.setBurnTime(RANGED_BURN_TIME);
         }
-        }
+
+
+    }
 
 }
 

@@ -3,58 +3,38 @@ package com.Monc618.morecrossbow.item.tier;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
-public enum CrossbowTiers implements CrossbowTier{
-    // 格式：名称(基础装填时间, 耐久度, 伤害加成, 修复材料)
-    // 格式：名称(耐久度, 额外伤害, 速度倍率, 基础装填时间, 附魔等级, 修复材料)
-    // 速度倍率和附魔等级如果你暂时用不到，可以先写0，以后扩展再用
+public enum CrossbowTiers implements CrossbowTier {
+    // 格式：名称(耐久, 装填时间, 初速度, 额外伤害, 附魔值, 修复材料)
+    COPPER(520,25,3.15F, 1.0F, 13, () -> Ingredient.of(Items.COPPER_INGOT)),
+    IRON(880, 20, 3.0F, 1.5F, 15, () -> Ingredient.of(Items.IRON_INGOT)),
+    GOLD(328, 16, 2.5F, 0.8F, 30, () -> Ingredient.of(Items.GOLD_INGOT)),
+    EMERALD(1314,25,3.25F,1.2F,18,() -> Ingredient.of(Items.EMERALD)),
+    DIAMOND(1561, 22, 3.5F, 2.0F, 22, () -> Ingredient.of(Items.DIAMOND)),
+    NETHERITE(2031,20,4F, 3.0F, 25, () -> Ingredient.of(Items.NETHERITE_INGOT));
 
-    IRON(350, 0.0f, 0, 20, 14, () -> Ingredient.of(Items.IRON_INGOT)),
-    GOLD(50, 0.0f, 0, 15, 22, () -> Ingredient.of(Items.GOLD_INGOT)),    // 金弩拉得快，附魔好，但不耐用
-    DIAMOND(1000, 1.0f, 0, 18, 15, () -> Ingredient.of(Items.DIAMOND)),
-    NETHERITE(2000, 1.5f, 0, 16, 15, () -> Ingredient.of(Items.NETHERITE_INGOT));
+
 
     private final int durability;
-    private final float attackdamagebonus;
-    private final float speedMultiplier; // 预留字段：箭矢飞行速度倍率
-    private final int chargeTime;      // 核心字段：基础装填时间
-    private final int enchantmentValue;// 预留字段：附魔能力 (Enchantability)
+    private final int chargeTime;
+    private final float velocity;
+    private final float bonusDamage;
+    private final int enchantmentValue;
     private final java.util.function.Supplier<Ingredient> repairIngredient;
 
-    // 构造函数
-    CrossbowTiers(int durability, float attackdamagebonus, float speedMultiplier, int chargeTime, int enchantmentValue, java.util.function.Supplier<Ingredient> repairIngredient) {
+    CrossbowTiers(int durability, int chargeTime, float velocity, float bonusDamage, int enchantmentValue, java.util.function.Supplier<Ingredient> repairIngredient) {
         this.durability = durability;
-        this.attackdamagebonus = attackdamagebonus;
-        this.speedMultiplier = speedMultiplier;
         this.chargeTime = chargeTime;
+        this.velocity = velocity;
+        this.bonusDamage = bonusDamage;
         this.enchantmentValue = enchantmentValue;
         this.repairIngredient = repairIngredient;
     }
 
-    // --- Getter 方法 ---
-
-    public int getDurability() {
-        return this.durability;
-    }
-
-    public float getAttackDamageBonus() {
-        return this.attackdamagebonus;
-    }
-
-    public float getSpeedMultiplier() {
-        return this.speedMultiplier;
-    }
-
-    public int getChargeTime() {
-        return this.chargeTime;
-    }
-
-    public int getEnchantmentValue() {
-        return this.enchantmentValue;
-    }
-
-    public Ingredient getRepairIngredient() {
-        return this.repairIngredient.get();
-    }
+    @Override public int getDurability() { return this.durability; }
+    @Override public int getChargeTime() { return this.chargeTime; }
+    @Override public float getProjectileVelocity() { return this.velocity; }
+    @Override public float getBonusDamage() { return this.bonusDamage; }
+    @Override public int getEnchantmentValue() { return this.enchantmentValue; }
+    @Override public Ingredient getRepairIngredient() { return this.repairIngredient.get(); }
 }
-
 

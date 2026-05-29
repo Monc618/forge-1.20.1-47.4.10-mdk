@@ -1,5 +1,10 @@
 {
-
-  "item.morecrossbow-mod:iron_crossbow": "Iron Crossbow",
-  "creativetab.morecrossbow_tab": "morecrossbow"
+  "item.morecrossbow_mod.gold_crossbow": "Gold Crossbow",
+  "item.morecrossbow_mod.iron_crossbow": "Iron Crossbow",
+  "item.morecrossbow_mod.diamond_crossbow": "Diamond Crossbow",
+  "item.morecrossbow_mod.netherite_crossbow": "Netherite Crossbow",
+  "item.morecrossbow_mod.copper_crossbow": "Copper Crossbow",
+  "item.morecrossbow_mod.emerald_crossbow": "Emerald Crossbow",
+  "item.morecrossbow_mod.warden_crossbow": "Warden Crossbow",
+  "item.morecrossbow_mod.sonic_boom": "§5sonic boom"
 }

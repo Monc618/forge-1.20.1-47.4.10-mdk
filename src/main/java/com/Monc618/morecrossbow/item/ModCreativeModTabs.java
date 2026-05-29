@@ -26,11 +26,17 @@ public class ModCreativeModTabs {
 
     public static final RegistryObject<CreativeModeTab> MORECROSSBOW_TAB =
             CREATIVE_MODE_TABS.register("morecrossbow_tab", () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModItems.IRON_CROSSBOW.get()))
-                    .title(Component.translatable("CrossowGroup.morecrossbow_tab"))
+                    .icon(() -> new ItemStack(ModItems.WARDEN_CROSSBOW.get()))
+                    .title(Component.translatable("morecrossbow_tab"))
                     .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModItems.COPPER_CROSSBOW.get());
                         pOutput.accept(ModItems.IRON_CROSSBOW.get());
                         pOutput.accept(ModItems.GOLD_CROSSBOW.get());
+                        pOutput.accept(ModItems.EMERALD_CROSSBOW.get());
+                        pOutput.accept(ModItems.DIAMOND_CROSSBOW.get());
+                        pOutput.accept(ModItems.NETHERITE_CROSSBOW.get());
+                        pOutput.accept(ModItems.WARDEN_CROSSBOW.get());
+
 
                     })
                     .build());

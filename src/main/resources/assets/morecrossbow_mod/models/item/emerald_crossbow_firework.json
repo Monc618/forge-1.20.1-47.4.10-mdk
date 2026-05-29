@@ -1,0 +1,6 @@
+{
+  "parent": "morecrossbow_mod:item/emerald_crossbow",
+  "textures": {
+    "layer0": "morecrossbow_mod:item/emerald_crossbow_firework"
+  }
+}

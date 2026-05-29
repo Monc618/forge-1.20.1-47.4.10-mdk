@@ -3,6 +3,7 @@ package com.Monc618.morecrossbow;
 import com.Monc618.morecrossbow.item.ModCreativeModTabs;
 import com.Monc618.morecrossbow.item.ModItems;
 import com.Monc618.morecrossbow.unit.ModItemProperties;
+import com.Monc618.morecrossbow.unit.TierCrossbowProperties;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -83,7 +84,9 @@ public class MoreCrossbowMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+
             ModItemProperties.addCustomItemProperties();
+            TierCrossbowProperties.addCustomItemProperties();
         }
     }
 }
