@@ -36,6 +36,10 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.DIAMOND_CROSSBOW.get());
                         pOutput.accept(ModItems.NETHERITE_CROSSBOW.get());
                         pOutput.accept(ModItems.WARDEN_CROSSBOW.get());
+                        pOutput.accept(ModItems.WARDEN_UPGRADE_SMITHING_TEMPLATE.get());
+                        pOutput.accept(ModItems.EXPLOSIVE_ARROW.get());
+                        pOutput.accept(ModItems.FIRE_ARROW.get());
+                        pOutput.accept(ModItems.FEATHERLESS_ARROW.get());
 
 
                     })

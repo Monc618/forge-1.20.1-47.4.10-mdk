@@ -1,0 +1,22 @@
+{
+  "display": {
+    "icon": {
+      "item": "morecrossbow_mod:warden_crossbow"
+    },
+    "title": {
+      "translate": "advancement.morecrossbow_mod.root.title"
+    },
+    "description": {
+      "translate": "advancement.morecrossbow_mod.root.description"
+    },
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

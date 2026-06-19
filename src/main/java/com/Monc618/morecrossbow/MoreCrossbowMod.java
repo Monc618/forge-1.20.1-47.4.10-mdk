@@ -3,6 +3,7 @@ package com.Monc618.morecrossbow;
 import com.Monc618.morecrossbow.item.ModCreativeModTabs;
 import com.Monc618.morecrossbow.item.ModItems;
 import com.Monc618.morecrossbow.unit.ModItemProperties;
+import com.Monc618.morecrossbow.unit.ModLootModifiers;
 import com.Monc618.morecrossbow.unit.TierCrossbowProperties;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -29,12 +30,15 @@ public class MoreCrossbowMod {
     public static final String MOD_ID = "morecrossbow_mod";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
+    // 1. Forge 底层实例化时需要调用无参构造函数（必须存在，否则崩溃）
+    public MoreCrossbowMod() {
+    }
 
 
     public MoreCrossbowMod(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
-        ModCreativeModTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -42,6 +46,9 @@ public class MoreCrossbowMod {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
         ModCreativeModTabs.register(modEventBus);
+        com.Monc618.morecrossbow.entity.ModEntityTypes.register(modEventBus);
+        com.Monc618.morecrossbow.screen.ModMenuTypes.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
 
 
 
@@ -82,11 +89,19 @@ public class MoreCrossbowMod {
     public static class ClientModEvents
     {
         @SubscribeEvent
+        public static void onRegisterRenderers(net.minecraftforge.client.event.EntityRenderersEvent.RegisterRenderers event) {
+            event.registerEntityRenderer(com.Monc618.morecrossbow.entity.ModEntityTypes.EXPLOSIVE_ARROW.get(), com.Monc618.morecrossbow.entity.client.ModArrowRenderer::new);
+            event.registerEntityRenderer(com.Monc618.morecrossbow.entity.ModEntityTypes.FIRE_ARROW.get(), com.Monc618.morecrossbow.entity.client.ModArrowRenderer::new);
+            event.registerEntityRenderer(com.Monc618.morecrossbow.entity.ModEntityTypes.FEATHERLESS_ARROW.get(), com.Monc618.morecrossbow.entity.client.ModArrowRenderer::new);
+        }
+
+        @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
 
             ModItemProperties.addCustomItemProperties();
             TierCrossbowProperties.addCustomItemProperties();
+            net.minecraft.client.gui.screens.MenuScreens.register(com.Monc618.morecrossbow.screen.ModMenuTypes.FLETCHING_TABLE.get(), com.Monc618.morecrossbow.screen.FletchingTableScreen::new);
         }
     }
 }

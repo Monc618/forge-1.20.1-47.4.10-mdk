@@ -6,5 +6,21 @@
   "item.morecrossbow_mod.copper_crossbow": "Copper Crossbow",
   "item.morecrossbow_mod.emerald_crossbow": "Emerald Crossbow",
   "item.morecrossbow_mod.warden_crossbow": "Warden Crossbow",
-  "item.morecrossbow_mod.sonic_boom": "§5sonic boom"
+  "item.morecrossbow_mod.sonic_boom": "§5sonic boom",
+  "upgrade.morecrossbow_mod.warden_upgrade": "§cWarden Upgrade",
+  "item.morecrossbow_mod.warden_upgrade_smithing_template": "Warden Upgrade Smithing Template",
+  "item.morecrossbow_mod.warden_upgrade_smithing_template.applies_to": "Netherite Crossbow",
+  "item.morecrossbow_mod.warden_upgrade_smithing_template.ingredients": "echo_shard",
+  "item.morecrossbow_mod.warden_upgrade_smithing_template.base_slot_description": "put Netherite Crossbow here ",
+  "item.morecrossbow_mod.warden_upgrade_smithing_template.additions_slot_description": "put echo_shard here ",
+  "morecrossbow_tab": "more crossbow",
+  "advancement.morecrossbow_mod.warden_crossbow.title": "furyOfTheAbyss",
+  "advancement.morecrossbow_mod.warden_crossbow.description": "obtainWardenCrossbow",
+  "advancement.morecrossbow_mod.root.title": "more crossbow",
+  "advancement.morecrossbow_mod.root.description": "beginMoreCrossbowAdventures",
+  "item.morecrossbow_mod.explosive_arrow": "Explosive Arrow",
+  "item.morecrossbow_mod.explosive_arrow.desc": "Destroys blocks on impact",
+  "item.morecrossbow_mod.fire_arrow": "Fire Arrow",
+  "item.morecrossbow_mod.featherless_arrow": "Featherless Arrow",
+  "container.fletching_table": "Fletching Table"
 }

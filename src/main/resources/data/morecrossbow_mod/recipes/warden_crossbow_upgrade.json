@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:echo_shard"
+  },
+  "base": {
+    "item": "morecrossbow_mod:netherite_crossbow"
+  },
+  "result": {
+    "item": "morecrossbow_mod:warden_crossbow"
+  },
+  "template": {
+    "item": "morecrossbow_mod:warden_upgrade_smithing_template"
+  }
+}

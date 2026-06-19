@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "morecrossbow_mod:explosive_arrow",
+    "morecrossbow_mod:fire_arrow",
+    "morecrossbow_mod:featherless_arrow"
+  ]
+}

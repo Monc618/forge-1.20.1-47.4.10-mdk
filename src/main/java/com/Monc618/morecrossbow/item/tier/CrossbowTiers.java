@@ -6,11 +6,11 @@ import net.minecraft.world.item.crafting.Ingredient;
 public enum CrossbowTiers implements CrossbowTier {
     // 格式：名称(耐久, 装填时间, 初速度, 额外伤害, 附魔值, 修复材料)
     COPPER(520,25,3.15F, 1.0F, 13, () -> Ingredient.of(Items.COPPER_INGOT)),
-    IRON(880, 20, 3.0F, 1.5F, 15, () -> Ingredient.of(Items.IRON_INGOT)),
-    GOLD(328, 16, 2.5F, 0.8F, 30, () -> Ingredient.of(Items.GOLD_INGOT)),
+    IRON(880, 40, 3.8F, 1.5F, 15, () -> Ingredient.of(Items.IRON_INGOT)),
+    GOLD(328, 15, 2.5F, 0.8F, 30, () -> Ingredient.of(Items.GOLD_INGOT)),
     EMERALD(1314,25,3.25F,1.2F,18,() -> Ingredient.of(Items.EMERALD)),
-    DIAMOND(1561, 22, 3.5F, 2.0F, 22, () -> Ingredient.of(Items.DIAMOND)),
-    NETHERITE(2031,20,4F, 3.0F, 25, () -> Ingredient.of(Items.NETHERITE_INGOT));
+    DIAMOND(1561, 22, 3.5F, 3.0F, 22, () -> Ingredient.of(Items.DIAMOND)),
+    NETHERITE(2031,20,4.5F, 4.0F, 25, () -> Ingredient.of(Items.NETHERITE_INGOT));
 
 
 

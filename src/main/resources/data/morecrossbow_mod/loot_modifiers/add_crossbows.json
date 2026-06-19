@@ -1,0 +1,9 @@
+{
+  "type": "morecrossbow_mod:add_crossbow",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/simple_dungeon"
+    }
+  ]
+}

@@ -3,12 +3,17 @@ package com.Monc618.morecrossbow.item;
 import com.Monc618.morecrossbow.MoreCrossbowMod;
 import com.Monc618.morecrossbow.item.custom.*;
 import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.SmithingTemplateItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.List;
 
 /**
  * ModItems 类用于注册和管理模组中的物品
@@ -20,6 +25,19 @@ public class ModItems {
 
     // 1. 自定义一个“传说”稀有度，颜色代码 §6 是金色
     public static final Rarity LEGENDARY = Rarity.create("LEGENDARY", ChatFormatting.DARK_RED);
+    public static final RegistryObject<Item> WARDEN_UPGRADE_SMITHING_TEMPLATE=
+            ITEMS.register("warden_upgrade_smithing_template", () -> new SmithingTemplateItem(
+                    Component.translatable("item.morecrossbow_mod.warden_upgrade_smithing_template.applies_to").withStyle(ChatFormatting.BLUE), // 适用于...
+                    Component.translatable("item.morecrossbow_mod.warden_upgrade_smithing_template.ingredients").withStyle(ChatFormatting.BLUE), // 升级材料...
+                    Component.translatable("upgrade.morecrossbow_mod.warden_upgrade").withStyle(ChatFormatting.RED), // 升级描述标题
+                    Component.translatable("item.morecrossbow_mod.warden_upgrade_smithing_template.base_slot_description"), // 底座槽位描述
+                    Component.translatable("item.morecrossbow_mod.warden_upgrade_smithing_template.additions_slot_description"), // 材料槽位描述
+                    // 底座空槽位图标：使用原版弩的图标
+                    List.of(new ResourceLocation("morecrossbow_mod", "item/empty_slot_crossbow")),
+                    // 材料空槽位图标：使用原版下界合金锭的图标（或者换成你的材料图标，如 item/echo_shard）
+                    List.of(new ResourceLocation("morecrossbow_mod", "item/empty_slot_warden_material"))
+
+            ));
 
     public static final RegistryObject<Item> SONIC_BOOM =
             ITEMS.register("sonic_boom", () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
@@ -36,6 +54,10 @@ public class ModItems {
             ITEMS.register("emerald_crossbow", () -> new EmeraldCrossbowItem(new Item.Properties().rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> DIAMOND_CROSSBOW =
             ITEMS.register("diamond_crossbow", () -> new DiamondCrossbowItem(new Item.Properties().rarity(Rarity.RARE)));
+    public static final RegistryObject<Item> EXPLOSIVE_ARROW = ITEMS.register("explosive_arrow", () -> new ExplosiveArrowItem(new Item.Properties()));
+    public static final RegistryObject<Item> FIRE_ARROW = ITEMS.register("fire_arrow", () -> new FireArrowItem(new Item.Properties()));
+    public static final RegistryObject<Item> FEATHERLESS_ARROW = ITEMS.register("featherless_arrow", () -> new FeatherlessArrowItem(new Item.Properties()));
+
     public static final RegistryObject<Item> NETHERITE_CROSSBOW =
             ITEMS.register("netherite_crossbow", () -> new NetheriteCrossbowItem(new Item.Properties().rarity(Rarity.RARE)));
 

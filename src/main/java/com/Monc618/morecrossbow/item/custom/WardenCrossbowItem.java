@@ -199,17 +199,16 @@ public class WardenCrossbowItem extends CrossbowItem {
                 for (int i = 0; i < count; ++i) {
 
 
-
-                        float yaw = baseYaw;
-                        if (count == 3) {
-                            if (i == 1) yaw -= 30.0F; // 向左偏10度
-                            if (i == 2) yaw += 30.0F; // 向右偏10度
-
-                        }
-// 执行自定义声波攻击逻辑
-                        performSonicBoom((ServerLevel) level, player, yaw, basePitch);
+                    float yaw = baseYaw;
+                    if (count == 3) {
+                        if (i == 1) yaw -= 30.0F; // 向左偏
+                        if (i == 2) yaw += 30.0F; // 向右偏
 
                     }
+// 执行自定义声波攻击逻辑
+                    performSonicBoom((ServerLevel) level, player, yaw, basePitch);
+
+                }
 
                 // 播放监守者发射声波的音效，更有代入感
                 level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.WARDEN_SONIC_BOOM, SoundSource.PLAYERS, 1.0F, 1.0F);
@@ -223,15 +222,18 @@ public class WardenCrossbowItem extends CrossbowItem {
                     // 你可以修改这个数值，比如改成 4.0 就是多加2颗心
                     arrow.setBaseDamage(arrow.getBaseDamage() + 2.0);
                 });*/
+                CrossbowItem.setCharged(stack, false);
+                stack.removeTagKey("ChargedProjectiles");
+            }
 
-        }
 
+            if (level.isClientSide) {
 
-            CrossbowItem.setCharged(stack, false);
-            stack.removeTagKey("ChargedProjectiles");
-            player.awardStat(Stats.ITEM_USED.get(this));
+                player.awardStat(Stats.ITEM_USED.get(this));
+
+            }
             return InteractionResultHolder.consume(stack);
-        } else {
+        }else {
             /*boolean creative = player.getAbilities().instabuild;
             ItemStack ammo = player.getProjectile(stack);
             if (!creative && ammo.isEmpty()) {

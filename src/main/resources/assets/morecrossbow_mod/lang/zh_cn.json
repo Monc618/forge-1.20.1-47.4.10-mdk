@@ -1,4 +1,26 @@
 {
   "item.morecrossbow_mod.sonic_boom": "§5声波",
-  "item.morecrossbow_mod.warden_crossbow": "万籁归寂"
+  "item.morecrossbow_mod.warden_crossbow": "万籁归寂",
+  "upgrade.morecrossbow_mod.warden_upgrade": "万籁归寂升级",
+  "item.morecrossbow_mod.warden_upgrade_smithing_template": "守卫弩升级模板",
+  "item.morecrossbow_mod.warden_upgrade_smithing_template.applies_to": "下界合金弩",
+  "item.morecrossbow_mod.warden_upgrade_smithing_template.ingredients": "回响碎片",
+  "item.morecrossbow_mod.warden_upgrade_smithing_template.base_slot_description": "将下界合金弩放置在此处",
+  "item.morecrossbow_mod.warden_upgrade_smithing_template.additions_slot_description": "将回响碎片放置在此处",
+  "item.morecrossbow_mod.gold_crossbow": "金弩",
+  "item.morecrossbow_mod.iron_crossbow": "铁弩",
+  "item.morecrossbow_mod.diamond_crossbow": "钻石弩",
+  "item.morecrossbow_mod.netherite_crossbow": "下界合金弩",
+  "item.morecrossbow_mod.copper_crossbow": "铜弩",
+  "item.morecrossbow_mod.emerald_crossbow": "绿宝石弩",
+  "morecrossbow_tab": "更多弩",
+  "advancement.morecrossbow_mod.warden_crossbow.title": "深渊之怒",
+  "advancement.morecrossbow_mod.warden_crossbow.description": "获得一把守卫弩",
+  "advancement.morecrossbow_mod.root.title": "更多弩",
+  "advancement.morecrossbow_mod.root.description": "开始你的更多弩冒险之旅！",
+  "item.morecrossbow_mod.explosive_arrow": "爆炸弩箭",
+  "item.morecrossbow_mod.explosive_arrow.desc": "射出后会破坏方块",
+  "item.morecrossbow_mod.fire_arrow": "燃烧弩箭",
+  "item.morecrossbow_mod.featherless_arrow": "无羽箭",
+  "container.fletching_table": "制箭台"
 }
