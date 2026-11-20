@@ -1,0 +1,16 @@
+{
+  "itemGroup.frontierarsenal": "边境军械",
+  "item.frontierarsenal.ranger_carbine": "游骑兵卡宾枪",
+  "item.frontierarsenal.scout_pistol": "侦察手枪",
+  "item.frontierarsenal.rifle_round": "步枪弹",
+  "item.frontierarsenal.pistol_round": "手枪弹",
+  "tooltip.frontierarsenal.magazine": "弹匣：%1$s / %2$s",
+  "tooltip.frontierarsenal.controls": "右键射击，潜行 + 右键装填",
+  "tooltip.frontierarsenal.damage": "伤害：%1$s",
+  "tooltip.frontierarsenal.range": "射程：%1$s 格",
+  "message.frontierarsenal.empty": "弹匣已空，潜行并右键装填",
+  "message.frontierarsenal.no_ammo": "背包里没有对应弹药",
+  "message.frontierarsenal.invalid_ammo": "武器配置引用了不存在的弹药",
+  "message.frontierarsenal.magazine_full": "弹匣已满",
+  "message.frontierarsenal.reloaded": "已装填：%1$s / %2$s"
+}

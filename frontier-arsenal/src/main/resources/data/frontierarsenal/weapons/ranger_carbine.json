@@ -1,0 +1,8 @@
+{
+  "ammunition": "frontierarsenal:rifle_round",
+  "magazine_size": 12,
+  "damage": 6.0,
+  "range": 48.0,
+  "cooldown_ticks": 5,
+  "recoil": 1.0
+}

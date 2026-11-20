@@ -1,0 +1,16 @@
+{
+  "itemGroup.frontierarsenal": "Frontier Arsenal",
+  "item.frontierarsenal.ranger_carbine": "Ranger Carbine",
+  "item.frontierarsenal.scout_pistol": "Scout Pistol",
+  "item.frontierarsenal.rifle_round": "Rifle Round",
+  "item.frontierarsenal.pistol_round": "Pistol Round",
+  "tooltip.frontierarsenal.magazine": "Magazine: %1$s / %2$s",
+  "tooltip.frontierarsenal.controls": "Right-click to fire; sneak + right-click to reload",
+  "tooltip.frontierarsenal.damage": "Damage: %1$s",
+  "tooltip.frontierarsenal.range": "Range: %1$s blocks",
+  "message.frontierarsenal.empty": "Magazine empty. Sneak and right-click to reload.",
+  "message.frontierarsenal.no_ammo": "No matching ammunition in your inventory",
+  "message.frontierarsenal.invalid_ammo": "Weapon profile refers to missing ammunition",
+  "message.frontierarsenal.magazine_full": "Magazine is full",
+  "message.frontierarsenal.reloaded": "Loaded: %1$s / %2$s"
+}

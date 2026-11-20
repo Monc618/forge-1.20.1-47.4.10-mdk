@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:copper_nugget" },
+    { "item": "minecraft:gunpowder" }
+  ],
+  "result": {
+    "item": "frontierarsenal:pistol_round",
+    "count": 4
+  }
+}
